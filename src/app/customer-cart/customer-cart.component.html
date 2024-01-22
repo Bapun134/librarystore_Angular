@@ -1,0 +1,101 @@
+
+<div>
+  <table class="table table-bordered-1">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Book Name</th>
+        <th>Author Name</th>
+        <th>Stock</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Adding to Cart</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of posts">
+        <th>{{ i.id }}</th>
+        <td>{{ i.bookName }}</td>
+        <td>{{ i.authorName }}</td>
+        <td>
+          <h3>{{ i.stk }}</h3>
+        </td>
+        <td>
+          <h3>Rs.{{ i.price }}</h3>
+        </td>
+        <td><input type="number" name="qty" id="i.id" [(ngModel)]="qty" /></td>
+        <td>
+          <button type="submit" (click)="onaddToCart(i.id, i.name, i.price)">
+            Add to Cart
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!--<p>{{posts|json}}</p>-->
+
+<br><br>
+
+<!-- Order Summary -->
+
+<div>
+  <h2 style="border: 1px solid black; width:fit-content;">Order Summary :</h2>
+  <table class="table table-bordered-2">
+    <thead>
+      <tr>
+        <th>BookId</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of cart1">
+        <th>{{ i.bookId }}</th>
+        <td>
+          <h3>{{ i.price }}</h3>
+        </td>
+        <td>
+          <h3>{{ i.qty }}</h3>
+        </td>
+        <td>
+          <h3>{{ i.total }}</h3>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h1>Bill Amount: {{ total }}</h1>
+
+
+<!-- Place Order -->
+<div class="container container-bg-warning p-3 form-container">
+  <form>
+    <label>Your Name:</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      [(ngModel)]="cust.customerName"
+      class="form-control"
+    /><br /><br />
+    <label>Contact No:</label>
+    <input
+      type="number"
+      id="phone"
+      name="phone"
+      [(ngModel)]="cust.phone"
+      class="form-control"
+    /><br /><br />
+
+    <button type="submit" (click)="PlaceOrder()" class="btn btn-primary"> Place Order </button>
+    
+  </form>
+  <br>
+</div>
+
+<br><br>
+
+<!-- <p>{{ cust | json }}</p> -->

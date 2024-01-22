@@ -1,0 +1,45 @@
+/* styles.css */
+
+/* Style for the first table */
+.table-bordered-1 {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .table-bordered-1 th, .table-bordered-1 td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  /* Style for the second table */
+  .table-bordered-2 {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .table-bordered-2 th, .table-bordered-2 td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  /* Additional styling for the container */
+  .container-bg-warning {
+    background-color: #ffe066; /* You can adjust the color as per your preference */
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+  }
+  
+  /* Additional styling for the form */
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+  }
+  
+  .form-container {
+    max-width: 400px; /* Adjust the width as per your preference */
+  }
