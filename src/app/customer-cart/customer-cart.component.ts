@@ -19,6 +19,7 @@ export class CustomerCartComponent {
   posts: any;
 
   cart1: Cart[] = new Array();
+  
   ngOnInit() {
     this.httpUserService.getBooks().subscribe(
       (response) => {
